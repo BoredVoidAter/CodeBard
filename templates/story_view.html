@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBard - Story View</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CodeBard Story</h1>
+        <div class="story-content">
+            <div class="code-section">
+                <h2>Pseudo-code</h2>
+                <pre id="code-display">{% for line in code_lines %}{{ line.code }}
+{% endfor %}</pre>
+            </div>
+            <div class="narrative-section">
+                <h2>Narrative</h2>
+                <div id="narrative-display">{{ narrative }}</div>
+            </div>
+        </div>
+
+        <div class="contribution-form">
+            <h2>Contribute a Code Line</h2>
+            <form id="code-contribution-form">
+                <textarea id="code-input" placeholder="Enter your pseudo-code line here..."></textarea>
+                <button type="submit">Add Line</button>
+            </form>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
